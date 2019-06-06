@@ -1,11 +1,13 @@
 // Follow the order in the readme
 @import "variables"; 
 @import "mixins"; 
-@import "navigation"; 
 @import "reset"; 
-@import "home-page"; 
+@import "global";
+@import "navigation"; 
 @import "footer"; 
-@import "global"; 
+@import "home-page"; 
+
+ 
 
 
 // =============== Body =================
@@ -13,41 +15,22 @@
 body {
     margin: auto;  
     max-width: 1000px; 
-}
-
-
-// ================ Header ===================
-header {
-    display: flex; 
-    margin-top: 3rem; 
-    padding-bottom: 3rem;
-    align-items: center; 
-    border-bottom: 1px dashed black; 
-
-    .site-title {
-        width: 60%; 
-        padding-left: 10rem; 
-    }
-
-    .top-nav {
-        width: 40%; 
-        display: flex;
-        justify-content: space-around; 
-        padding-right: 9rem; 
-        
-        a {
-            text-decoration: none; 
-            color: black; 
-            font-size: 1.5rem; 
-            margin-left: 2.5rem; 
-        }
+    @media @mobile {
+        padding: 2rem; 
     }
 }
+
+
+
 
 // ================== Top Section ================
 
 .top {
-    margin: 0rem 100px; 
+    margin: 0rem 100px;
+    @media @mobile {
+        width: 100%; 
+        margin: 0rem; 
+    }
 
     img {
         width: 100%; 
@@ -62,5 +45,19 @@ header {
         margin-top: 2rem; 
         border-bottom: 1px dashed black; 
         padding-bottom: 2rem; 
+    }
+}
+
+
+
+
+// =============== Bottom Section ================
+
+.btn {
+    .button-maker(15px, 1.5rem, 2rem); 
+    width: 80%; 
+    @media @mobile {
+        width: 100%; 
+        margin-bottom: 3rem; 
     }
 }
