@@ -282,6 +282,8 @@ header .site-title {
 @media (max-width: 500px) {
   .home .inverse-content {
     width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 .home .inverse-content .text-content {
