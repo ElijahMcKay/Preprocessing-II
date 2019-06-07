@@ -1,1 +1,63 @@
 // Follow the order in the readme
+@import "variables"; 
+@import "mixins"; 
+@import "reset"; 
+@import "global";
+@import "navigation"; 
+@import "footer"; 
+@import "home-page"; 
+
+ 
+
+
+// =============== Body =================
+
+body {
+    margin: auto;  
+    max-width: 1000px; 
+}
+
+.pad-wrapper {
+    padding: 0rem 2rem; 
+}
+
+
+
+// ================== Top Section ================
+
+.top {
+    margin: 0rem 100px;
+    @media @mobile {
+        width: 100%; 
+        margin: 0rem; 
+    }
+
+    img {
+        width: 100%; 
+        margin: auto; 
+    }
+
+    h1 {
+        margin-top: 3rem; 
+    }
+
+    p {
+        margin-top: 2rem; 
+        border-bottom: 1px dashed black; 
+        padding-bottom: 2rem; 
+    }
+}
+
+
+
+
+// =============== Bottom Section ================
+
+.btn {
+    .button-maker(15px, 1.5rem, 2rem); 
+    width: 80%; 
+    @media @mobile {
+        width: 100%; 
+        margin-bottom: 3rem; 
+    }
+}
